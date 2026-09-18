@@ -1,0 +1,107 @@
+# Mouse Reprogramming benchmark configuration
+#
+# Replicates "Mouse reprogramming target enrichment" results.
+
+data:
+  h5ad_path: "data/Biddy_Patient_Snapshot.h5ad"
+  pkl_path:  "data/Mouse_Reprogramming.pkl.xz"
+
+# Ground truth gene set: hepatocyte reprogramming markers (iEP targets).
+ground_truth_genes:
+  # Pioneer / transition TFs
+  - "Mettl7a1"
+  - "FOXA1"
+  - "HNF4A"
+  - "GATA4"
+  - "GATA6"
+  - "FOXA2"
+  - "FOXA3"
+  - "HNF1B"
+  - "HNF1A"
+  - "CEBPA"
+  - "WNT4"
+  - "DLK1"
+  - "PEG3"
+
+  # Apolipoproteins & lipid metabolism
+  - "APOA1"
+  - "APOA4"
+  - "APOB"
+  - "APOC2"
+  - "APOE"
+  - "APOA2"
+  - "FABP1"
+  - "FABP2"
+  - "LIPG"
+  - "MTTP"
+
+  # Epithelial identity & adhesion
+  - "CDH1"
+  - "EPCAM"
+  - "KRT8"
+  - "KRT18"
+  - "CLDN3"
+  - "CLDN4"
+  - "CLDN7"
+  - "DSP"
+  - "JUP"
+  - "PKP2"
+
+  # Secreted proteins & progenitor markers
+  - "TTR"
+  - "ALB"
+  - "AFP"
+  - "SERPINA1"
+  - "AMBP"
+  - "APOH"
+  - "FGB"
+  - "FGG"
+  - "TF"
+  - "RBP4"
+
+  # Transport & membrane receptors
+  - "ASGR1"
+  - "ASGR2"
+  - "SLC2A2"
+  - "SLC27A2"
+  - "LDLR"
+  - "CD24"
+  - "MET"
+  - "FGFR2"
+  - "INSR"
+  - "CUBN"
+
+  # MEF (fibroblast) markers — decrease during reprogramming
+  - "COL1A1"
+  - "COL1A2"
+  - "COL3A1"
+  - "FN1"
+  - "POSTN"
+  - "SPARC"
+  - "VIM"
+  - "THY1"
+  - "LYZ"
+  - "DCN"
+  - "MGP"
+  - "SERPINE1"
+  - "FBN1"
+  - "ACTA2"
+  - "PDGFRA"
+
+parameters:
+  methods_to_test:
+    - "PAGA"
+    - "DPT"
+    - "Palantir"
+    - "TBR"
+    - "ANOVA"
+    - "Wilcoxon"
+    - "HiDDEN"
+    - "MELD"
+    - "Milo"
+    - "PseudobulkDESeq2"
+
+  # run.sh runs both input types to match the manuscript.
+  input_type: "all_genes"   # also run with "harmony" — see run.sh
+
+  output_dir: "outputs/results"

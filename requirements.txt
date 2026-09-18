@@ -1,0 +1,27 @@
+# Core scientific stack
+anndata==0.13.2
+scanpy==1.12.1
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.18.0
+scikit-learn==1.7.0
+
+# Enrichment scoring
+gseapy==1.3.0
+
+# Trajectory / pseudotime methods
+harmonypy==2.0.0      # harmony batch correction (input_type='harmony')
+palantir==1.4.5       # Palantir pseudotime
+meld==1.0.2           # MELD condition likelihood
+pertpy==1.3.0         # Milo (via pertpy.tl.Milo)
+graphtools==2.1.0     # VFC graph (used by MELD)
+leidenalg==0.10.2     # Leiden clustering (used by PAGA via sc.tl.leiden)
+igraph==0.11.9        # graph backend required by sc.tl.leiden
+
+# Pseudobulk DE
+pydeseq2==0.5.4
+
+# Utilities
+matplotlib==3.10.1
+tqdm==4.69.0
+PyYAML==6.0.2
