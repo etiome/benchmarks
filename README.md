@@ -21,14 +21,14 @@ method's ranked gene list.
 Pull the latest published image from GHCR:
 
 ```bash
-docker pull ghcr.io/etiome/tbr-benchmark:latest
+docker pull ghcr.io/etiome/benchmarks:latest
 ```
 
 Run the full benchmark, mapping a local `outputs/` folder to the
 container's output directory so every result lands on your host:
 
 ```bash
-docker run --rm -v "$(pwd)/outputs:/benchmarks/outputs" ghcr.io/etiome/tbr-benchmark:latest
+docker run --rm -v "$(pwd)/outputs:/benchmarks/outputs" ghcr.io/etiome/benchmarks:latest
 ```
 
 Once finished, the `outputs/` directory will contain the following:
