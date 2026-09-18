@@ -15,7 +15,7 @@ set of 68 markers known to change during induced endoderm progenitors -> mouse e
 * 32GB+ of RAM
 * 5GB+ of disk space
 
-## Quick start (Docker)
+## Quick start
 
 Pull the latest published image from GHCR:
 
