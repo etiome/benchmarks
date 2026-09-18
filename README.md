@@ -3,12 +3,11 @@
 Standalone replication package for the trajectory-method benchmarks reported in
 [ADD LINK HERE WHEN AVAILABLE].
 
-Given a single-cell dataset along a biological trajectory ([Biddy, et al. 2018](https://www.nature.com/articles/s41586-018-0744-4)), we compare ten
-methods on their ability to rank genes that are known targets of the trajectory.
+Given a single-cell dataset characterizing a biological process ([Biddy, et al. 2018](https://www.nature.com/articles/s41586-018-0744-4)), we compare ten
+methods on their ability to rank genes that have known association with that process.
 
-Ranking quality is measured by **GSEA-style enrichment** (NES) of a curated
-ground-truth gene set (68 hepatocyte reprogramming markers) against each
-method's ranked gene list.
+The quality of each method's ranking is assessed by **GSEA-style normalized enrichment scores** (NES) against a curated
+set of 68 markers known to change during induced endoderm progenitors -> mouse embryonic fibroblasts reprogramming.
 
 ## Requirements
 
